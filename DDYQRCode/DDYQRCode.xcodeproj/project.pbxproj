@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A41E52D220C4EB060038D236 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A41E52D120C4EB060038D236 /* Info.plist */; };
+		A451DF8C20B79CC900ADE0EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8720B79CC800ADE0EF /* AppDelegate.m */; };
+		A451DF8D20B79CC900ADE0EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8820B79CC800ADE0EF /* main.m */; };
+		A451DF8E20B79CC900ADE0EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8B20B79CC800ADE0EF /* ViewController.m */; };
+		A451DF9C20B7A15E00ADE0EF /* DDYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */; };
+		A451DF9D20B7A15E00ADE0EF /* DDYQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */; };
+		A459344C20C78679001FD4E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A459344820C78679001FD4E8 /* LaunchScreen.storyboard */; };
+		A459348C20C789D2001FD4E8 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347420C789D1001FD4E8 /* MASCompositeConstraint.m */; };
+		A459348D20C789D2001FD4E8 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347720C789D1001FD4E8 /* MASConstraint.m */; };
+		A459348E20C789D2001FD4E8 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347920C789D1001FD4E8 /* MASConstraintMaker.m */; };
+		A459348F20C789D2001FD4E8 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347B20C789D1001FD4E8 /* MASLayoutConstraint.m */; };
+		A459349020C789D2001FD4E8 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347F20C789D1001FD4E8 /* MASViewAttribute.m */; };
+		A459349120C789D2001FD4E8 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459348120C789D1001FD4E8 /* MASViewConstraint.m */; };
+		A459349220C789D2001FD4E8 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A459348320C789D1001FD4E8 /* NSArray+MASAdditions.m */; };
+		A459349320C789D2001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A459348620C789D1001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		A459349420C789D2001FD4E8 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A459348820C789D1001FD4E8 /* View+MASAdditions.m */; };
+		A459349520C789D2001FD4E8 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A459348B20C789D1001FD4E8 /* ViewController+MASAdditions.m */; };
+		A461CB9B20BD488500BBF728 /* DDYScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A461CB9A20BD488500BBF728 /* DDYScanVC.m */; };
+		A461CBC320BFD08F00BBF728 /* DDYScanResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A461CBC220BFD08F00BBF728 /* DDYScanResultVC.m */; };
+		A461CBC620BFD26F00BBF728 /* DDYQRCodeImgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A461CBC520BFD26F00BBF728 /* DDYQRCodeImgVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A41E52D120C4EB060038D236 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A451DF6C20B79B1C00ADE0EF /* DDYQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDYQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A451DF8720B79CC800ADE0EF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A451DF8820B79CC800ADE0EF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A451DF8920B79CC800ADE0EF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A451DF8A20B79CC800ADE0EF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A451DF8B20B79CC800ADE0EF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A451DF9120B7A15E00ADE0EF /* DDYQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYQRCodeManager.h; sourceTree = "<group>"; };
+		A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYQRCode.bundle; sourceTree = "<group>"; };
+		A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYQRCodeManager.m; sourceTree = "<group>"; };
+		A459344920C78679001FD4E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A459347320C789D1001FD4E8 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		A459347420C789D1001FD4E8 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		A459347520C789D1001FD4E8 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		A459347620C789D1001FD4E8 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		A459347720C789D1001FD4E8 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		A459347820C789D1001FD4E8 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		A459347920C789D1001FD4E8 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		A459347A20C789D1001FD4E8 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		A459347B20C789D1001FD4E8 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		A459347C20C789D1001FD4E8 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		A459347D20C789D1001FD4E8 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		A459347E20C789D1001FD4E8 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		A459347F20C789D1001FD4E8 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		A459348020C789D1001FD4E8 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		A459348120C789D1001FD4E8 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		A459348220C789D1001FD4E8 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		A459348320C789D1001FD4E8 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		A459348420C789D1001FD4E8 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		A459348520C789D1001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		A459348620C789D1001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		A459348720C789D1001FD4E8 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		A459348820C789D1001FD4E8 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		A459348920C789D1001FD4E8 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		A459348A20C789D1001FD4E8 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		A459348B20C789D1001FD4E8 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		A461CB9920BD488500BBF728 /* DDYScanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYScanVC.h; sourceTree = "<group>"; };
+		A461CB9A20BD488500BBF728 /* DDYScanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYScanVC.m; sourceTree = "<group>"; };
+		A461CBC120BFD08F00BBF728 /* DDYScanResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYScanResultVC.h; sourceTree = "<group>"; };
+		A461CBC220BFD08F00BBF728 /* DDYScanResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYScanResultVC.m; sourceTree = "<group>"; };
+		A461CBC420BFD26F00BBF728 /* DDYQRCodeImgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYQRCodeImgVC.h; sourceTree = "<group>"; };
+		A461CBC520BFD26F00BBF728 /* DDYQRCodeImgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYQRCodeImgVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A451DF6920B79B1C00ADE0EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A451DF6320B79B1C00ADE0EF = {
+			isa = PBXGroup;
+			children = (
+				A451DF6E20B79B1C00ADE0EF /* DDYQRCode */,
+				A451DF6D20B79B1C00ADE0EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A451DF6D20B79B1C00ADE0EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A451DF6C20B79B1C00ADE0EF /* DDYQRCode.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A451DF6E20B79B1C00ADE0EF /* DDYQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				A459347220C789D1001FD4E8 /* Masonry */,
+				A451DF8F20B79CF500ADE0EF /* QRCode */,
+				A451DF8520B79C6A00ADE0EF /* System */,
+			);
+			path = DDYQRCode;
+			sourceTree = "<group>";
+		};
+		A451DF8520B79C6A00ADE0EF /* System */ = {
+			isa = PBXGroup;
+			children = (
+				A41E52D120C4EB060038D236 /* Info.plist */,
+				A451DF8920B79CC800ADE0EF /* AppDelegate.h */,
+				A451DF8720B79CC800ADE0EF /* AppDelegate.m */,
+				A451DF8820B79CC800ADE0EF /* main.m */,
+				A451DF8A20B79CC800ADE0EF /* ViewController.h */,
+				A451DF8B20B79CC800ADE0EF /* ViewController.m */,
+				A459344720C78679001FD4E8 /* Base.lproj */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		A451DF8F20B79CF500ADE0EF /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */,
+				A451DF9120B7A15E00ADE0EF /* DDYQRCodeManager.h */,
+				A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */,
+				A461CB9920BD488500BBF728 /* DDYScanVC.h */,
+				A461CB9A20BD488500BBF728 /* DDYScanVC.m */,
+				A461CBC120BFD08F00BBF728 /* DDYScanResultVC.h */,
+				A461CBC220BFD08F00BBF728 /* DDYScanResultVC.m */,
+				A461CBC420BFD26F00BBF728 /* DDYQRCodeImgVC.h */,
+				A461CBC520BFD26F00BBF728 /* DDYQRCodeImgVC.m */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		A459344720C78679001FD4E8 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A459344820C78679001FD4E8 /* LaunchScreen.storyboard */,
+			);
+			name = Base.lproj;
+			path = ../../../DDYScratchView/DDYScratchView/System/Base.lproj;
+			sourceTree = "<group>";
+		};
+		A459347220C789D1001FD4E8 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				A459347320C789D1001FD4E8 /* MASCompositeConstraint.h */,
+				A459347420C789D1001FD4E8 /* MASCompositeConstraint.m */,
+				A459347520C789D1001FD4E8 /* MASConstraint+Private.h */,
+				A459347620C789D1001FD4E8 /* MASConstraint.h */,
+				A459347720C789D1001FD4E8 /* MASConstraint.m */,
+				A459347820C789D1001FD4E8 /* MASConstraintMaker.h */,
+				A459347920C789D1001FD4E8 /* MASConstraintMaker.m */,
+				A459347A20C789D1001FD4E8 /* MASLayoutConstraint.h */,
+				A459347B20C789D1001FD4E8 /* MASLayoutConstraint.m */,
+				A459347C20C789D1001FD4E8 /* Masonry.h */,
+				A459347D20C789D1001FD4E8 /* MASUtilities.h */,
+				A459347E20C789D1001FD4E8 /* MASViewAttribute.h */,
+				A459347F20C789D1001FD4E8 /* MASViewAttribute.m */,
+				A459348020C789D1001FD4E8 /* MASViewConstraint.h */,
+				A459348120C789D1001FD4E8 /* MASViewConstraint.m */,
+				A459348220C789D1001FD4E8 /* NSArray+MASAdditions.h */,
+				A459348320C789D1001FD4E8 /* NSArray+MASAdditions.m */,
+				A459348420C789D1001FD4E8 /* NSArray+MASShorthandAdditions.h */,
+				A459348520C789D1001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				A459348620C789D1001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				A459348720C789D1001FD4E8 /* View+MASAdditions.h */,
+				A459348820C789D1001FD4E8 /* View+MASAdditions.m */,
+				A459348920C789D1001FD4E8 /* View+MASShorthandAdditions.h */,
+				A459348A20C789D1001FD4E8 /* ViewController+MASAdditions.h */,
+				A459348B20C789D1001FD4E8 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A451DF6B20B79B1C00ADE0EF /* DDYQRCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A451DF8220B79B2600ADE0EF /* Build configuration list for PBXNativeTarget "DDYQRCode" */;
+			buildPhases = (
+				A451DF6820B79B1C00ADE0EF /* Sources */,
+				A451DF6920B79B1C00ADE0EF /* Frameworks */,
+				A451DF6A20B79B1C00ADE0EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDYQRCode;
+			productName = DDYQRCode;
+			productReference = A451DF6C20B79B1C00ADE0EF /* DDYQRCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A451DF6420B79B1C00ADE0EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = com.smartmesh;
+				TargetAttributes = {
+					A451DF6B20B79B1C00ADE0EF = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = A451DF6720B79B1C00ADE0EF /* Build configuration list for PBXProject "DDYQRCode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A451DF6320B79B1C00ADE0EF;
+			productRefGroup = A451DF6D20B79B1C00ADE0EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A451DF6B20B79B1C00ADE0EF /* DDYQRCode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A451DF6A20B79B1C00ADE0EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A459344C20C78679001FD4E8 /* LaunchScreen.storyboard in Resources */,
+				A451DF9C20B7A15E00ADE0EF /* DDYQRCode.bundle in Resources */,
+				A41E52D220C4EB060038D236 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A451DF6820B79B1C00ADE0EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A459349220C789D2001FD4E8 /* NSArray+MASAdditions.m in Sources */,
+				A459349120C789D2001FD4E8 /* MASViewConstraint.m in Sources */,
+				A461CBC320BFD08F00BBF728 /* DDYScanResultVC.m in Sources */,
+				A459348E20C789D2001FD4E8 /* MASConstraintMaker.m in Sources */,
+				A459349420C789D2001FD4E8 /* View+MASAdditions.m in Sources */,
+				A451DF8E20B79CC900ADE0EF /* ViewController.m in Sources */,
+				A459348D20C789D2001FD4E8 /* MASConstraint.m in Sources */,
+				A451DF8D20B79CC900ADE0EF /* main.m in Sources */,
+				A459349020C789D2001FD4E8 /* MASViewAttribute.m in Sources */,
+				A459349320C789D2001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				A461CB9B20BD488500BBF728 /* DDYScanVC.m in Sources */,
+				A459348C20C789D2001FD4E8 /* MASCompositeConstraint.m in Sources */,
+				A459348F20C789D2001FD4E8 /* MASLayoutConstraint.m in Sources */,
+				A451DF8C20B79CC900ADE0EF /* AppDelegate.m in Sources */,
+				A451DF9D20B7A15E00ADE0EF /* DDYQRCodeManager.m in Sources */,
+				A459349520C789D2001FD4E8 /* ViewController+MASAdditions.m in Sources */,
+				A461CBC620BFD26F00BBF728 /* DDYQRCodeImgVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A459344820C78679001FD4E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A459344920C78679001FD4E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A451DF8020B79B2600ADE0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A451DF8120B79B2600ADE0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A451DF8320B79B2600ADE0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23JJ7VRKJT;
+				INFOPLIST_FILE = "$(SRCROOT)/DDYQRCode/System/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartmesh.smart2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A451DF8420B79B2600ADE0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23JJ7VRKJT;
+				INFOPLIST_FILE = "$(SRCROOT)/DDYQRCode/System/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartmesh.smart2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A451DF6720B79B1C00ADE0EF /* Build configuration list for PBXProject "DDYQRCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A451DF8020B79B2600ADE0EF /* Debug */,
+				A451DF8120B79B2600ADE0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A451DF8220B79B2600ADE0EF /* Build configuration list for PBXNativeTarget "DDYQRCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A451DF8320B79B2600ADE0EF /* Debug */,
+				A451DF8420B79B2600ADE0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A451DF6420B79B1C00ADE0EF /* Project object */;
+}
