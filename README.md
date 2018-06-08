@@ -144,4 +144,26 @@
 [DDYQRCodeManager ddy_turnOnTorchLight:(button.selected = !button.selected)];
 ```
 
+  * 二维码展示界面逐步调整亮度
+  
+```
+// 进入(或前台)时获取初始亮度并赋值给属性变量，退出(或后台)时利用保存的变量进行亮度恢复，而销毁时直接更改无缓慢过程
+- (void)graduallySetBrightness:(CGFloat)brightness animation:(BOOL)animation {
+    [self.brightnessQueue cancelAllOperations];
+    if (animation) {
+        CGFloat currentBrightness = [UIScreen mainScreen].brightness;
+        CGFloat stepValue = 0.005 * ((brightness > currentBrightness) ? 1 : -1);
+        int times = fabs((brightness - currentBrightness) / 0.005);
+        for (CGFloat i = 1; i < times + 1; i++) {
+            [self.brightnessQueue addOperationWithBlock:^{
+                [NSThread sleepForTimeInterval:0.005];
+                [UIScreen mainScreen].brightness = currentBrightness + i * stepValue;
+            }];
+        }
+    } else {
+        [UIScreen mainScreen].brightness = brightness;
+    }
+}
+```
+
 
