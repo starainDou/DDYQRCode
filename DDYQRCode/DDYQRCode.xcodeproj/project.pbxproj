@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41AAA0B20C92F3F00A26818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41AAA0920C92F3F00A26818 /* LaunchScreen.storyboard */; };
 		A41E52D220C4EB060038D236 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A41E52D120C4EB060038D236 /* Info.plist */; };
 		A451DF8C20B79CC900ADE0EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8720B79CC800ADE0EF /* AppDelegate.m */; };
 		A451DF8D20B79CC900ADE0EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8820B79CC800ADE0EF /* main.m */; };
 		A451DF8E20B79CC900ADE0EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8B20B79CC800ADE0EF /* ViewController.m */; };
 		A451DF9C20B7A15E00ADE0EF /* DDYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */; };
 		A451DF9D20B7A15E00ADE0EF /* DDYQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */; };
-		A459344C20C78679001FD4E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A459344820C78679001FD4E8 /* LaunchScreen.storyboard */; };
 		A459348C20C789D2001FD4E8 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347420C789D1001FD4E8 /* MASCompositeConstraint.m */; };
 		A459348D20C789D2001FD4E8 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347720C789D1001FD4E8 /* MASConstraint.m */; };
 		A459348E20C789D2001FD4E8 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347920C789D1001FD4E8 /* MASConstraintMaker.m */; };
@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A41AAA0A20C92F3F00A26818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A41E52D120C4EB060038D236 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A451DF6C20B79B1C00ADE0EF /* DDYQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDYQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A451DF8720B79CC800ADE0EF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		A451DF9120B7A15E00ADE0EF /* DDYQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYQRCodeManager.h; sourceTree = "<group>"; };
 		A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYQRCode.bundle; sourceTree = "<group>"; };
 		A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYQRCodeManager.m; sourceTree = "<group>"; };
-		A459344920C78679001FD4E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A459347320C789D1001FD4E8 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		A459347420C789D1001FD4E8 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		A459347520C789D1001FD4E8 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -85,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A41AAA0820C92F3F00A26818 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A41AAA0920C92F3F00A26818 /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		A451DF6320B79B1C00ADE0EF = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +128,7 @@
 				A451DF8820B79CC800ADE0EF /* main.m */,
 				A451DF8A20B79CC800ADE0EF /* ViewController.h */,
 				A451DF8B20B79CC800ADE0EF /* ViewController.m */,
-				A459344720C78679001FD4E8 /* Base.lproj */,
+				A41AAA0820C92F3F00A26818 /* Base.lproj */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -139,15 +147,6 @@
 				A461CBC520BFD26F00BBF728 /* DDYQRCodeImgVC.m */,
 			);
 			path = QRCode;
-			sourceTree = "<group>";
-		};
-		A459344720C78679001FD4E8 /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				A459344820C78679001FD4E8 /* LaunchScreen.storyboard */,
-			);
-			name = Base.lproj;
-			path = ../../../DDYScratchView/DDYScratchView/System/Base.lproj;
 			sourceTree = "<group>";
 		};
 		A459347220C789D1001FD4E8 /* Masonry */ = {
@@ -239,7 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A459344C20C78679001FD4E8 /* LaunchScreen.storyboard in Resources */,
+				A41AAA0B20C92F3F00A26818 /* LaunchScreen.storyboard in Resources */,
 				A451DF9C20B7A15E00ADE0EF /* DDYQRCode.bundle in Resources */,
 				A41E52D220C4EB060038D236 /* Info.plist in Resources */,
 			);
@@ -275,10 +274,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A459344820C78679001FD4E8 /* LaunchScreen.storyboard */ = {
+		A41AAA0920C92F3F00A26818 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A459344920C78679001FD4E8 /* Base */,
+				A41AAA0A20C92F3F00A26818 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
