@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A41AAA0B20C92F3F00A26818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41AAA0920C92F3F00A26818 /* LaunchScreen.storyboard */; };
-		A41E52D220C4EB060038D236 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A41E52D120C4EB060038D236 /* Info.plist */; };
-		A451DF8C20B79CC900ADE0EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8720B79CC800ADE0EF /* AppDelegate.m */; };
-		A451DF8D20B79CC900ADE0EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8820B79CC800ADE0EF /* main.m */; };
-		A451DF8E20B79CC900ADE0EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF8B20B79CC800ADE0EF /* ViewController.m */; };
+		A41AAA5D20CA619A00A26818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A41AAA5620CA619A00A26818 /* AppDelegate.m */; };
+		A41AAA5E20CA619A00A26818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41AAA5720CA619A00A26818 /* LaunchScreen.storyboard */; };
+		A41AAA5F20CA619A00A26818 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A41AAA5920CA619A00A26818 /* Info.plist */; };
+		A41AAA6020CA619A00A26818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A41AAA5A20CA619A00A26818 /* main.m */; };
+		A41AAA6120CA619A00A26818 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41AAA5C20CA619A00A26818 /* ViewController.m */; };
 		A451DF9C20B7A15E00ADE0EF /* DDYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */; };
 		A451DF9D20B7A15E00ADE0EF /* DDYQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */; };
 		A459348C20C789D2001FD4E8 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347420C789D1001FD4E8 /* MASCompositeConstraint.m */; };
@@ -30,14 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A41AAA0A20C92F3F00A26818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A41E52D120C4EB060038D236 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A41AAA5520CA619A00A26818 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A41AAA5620CA619A00A26818 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A41AAA5820CA619A00A26818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A41AAA5920CA619A00A26818 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A41AAA5A20CA619A00A26818 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A41AAA5B20CA619A00A26818 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A41AAA5C20CA619A00A26818 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A451DF6C20B79B1C00ADE0EF /* DDYQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDYQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A451DF8720B79CC800ADE0EF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A451DF8820B79CC800ADE0EF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A451DF8920B79CC800ADE0EF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A451DF8A20B79CC800ADE0EF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A451DF8B20B79CC800ADE0EF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A451DF9120B7A15E00ADE0EF /* DDYQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYQRCodeManager.h; sourceTree = "<group>"; };
 		A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYQRCode.bundle; sourceTree = "<group>"; };
 		A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYQRCodeManager.m; sourceTree = "<group>"; };
@@ -85,12 +85,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A41AAA0820C92F3F00A26818 /* Base.lproj */ = {
+		A41AAA5420CA619A00A26818 /* System */ = {
 			isa = PBXGroup;
 			children = (
-				A41AAA0920C92F3F00A26818 /* LaunchScreen.storyboard */,
+				A41AAA5520CA619A00A26818 /* AppDelegate.h */,
+				A41AAA5620CA619A00A26818 /* AppDelegate.m */,
+				A41AAA5720CA619A00A26818 /* LaunchScreen.storyboard */,
+				A41AAA5920CA619A00A26818 /* Info.plist */,
+				A41AAA5A20CA619A00A26818 /* main.m */,
+				A41AAA5B20CA619A00A26818 /* ViewController.h */,
+				A41AAA5C20CA619A00A26818 /* ViewController.m */,
 			);
-			path = Base.lproj;
+			path = System;
 			sourceTree = "<group>";
 		};
 		A451DF6320B79B1C00ADE0EF = {
@@ -112,25 +118,11 @@
 		A451DF6E20B79B1C00ADE0EF /* DDYQRCode */ = {
 			isa = PBXGroup;
 			children = (
+				A41AAA5420CA619A00A26818 /* System */,
 				A459347220C789D1001FD4E8 /* Masonry */,
 				A451DF8F20B79CF500ADE0EF /* QRCode */,
-				A451DF8520B79C6A00ADE0EF /* System */,
 			);
 			path = DDYQRCode;
-			sourceTree = "<group>";
-		};
-		A451DF8520B79C6A00ADE0EF /* System */ = {
-			isa = PBXGroup;
-			children = (
-				A41E52D120C4EB060038D236 /* Info.plist */,
-				A451DF8920B79CC800ADE0EF /* AppDelegate.h */,
-				A451DF8720B79CC800ADE0EF /* AppDelegate.m */,
-				A451DF8820B79CC800ADE0EF /* main.m */,
-				A451DF8A20B79CC800ADE0EF /* ViewController.h */,
-				A451DF8B20B79CC800ADE0EF /* ViewController.m */,
-				A41AAA0820C92F3F00A26818 /* Base.lproj */,
-			);
-			path = System;
 			sourceTree = "<group>";
 		};
 		A451DF8F20B79CF500ADE0EF /* QRCode */ = {
@@ -238,9 +230,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41AAA0B20C92F3F00A26818 /* LaunchScreen.storyboard in Resources */,
 				A451DF9C20B7A15E00ADE0EF /* DDYQRCode.bundle in Resources */,
-				A41E52D220C4EB060038D236 /* Info.plist in Resources */,
+				A41AAA5E20CA619A00A26818 /* LaunchScreen.storyboard in Resources */,
+				A41AAA5F20CA619A00A26818 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,33 +243,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A41AAA6120CA619A00A26818 /* ViewController.m in Sources */,
 				A459349220C789D2001FD4E8 /* NSArray+MASAdditions.m in Sources */,
 				A459349120C789D2001FD4E8 /* MASViewConstraint.m in Sources */,
 				A461CBC320BFD08F00BBF728 /* DDYScanResultVC.m in Sources */,
 				A459348E20C789D2001FD4E8 /* MASConstraintMaker.m in Sources */,
 				A459349420C789D2001FD4E8 /* View+MASAdditions.m in Sources */,
-				A451DF8E20B79CC900ADE0EF /* ViewController.m in Sources */,
 				A459348D20C789D2001FD4E8 /* MASConstraint.m in Sources */,
-				A451DF8D20B79CC900ADE0EF /* main.m in Sources */,
+				A41AAA6020CA619A00A26818 /* main.m in Sources */,
 				A459349020C789D2001FD4E8 /* MASViewAttribute.m in Sources */,
 				A459349320C789D2001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A461CB9B20BD488500BBF728 /* DDYScanVC.m in Sources */,
 				A459348C20C789D2001FD4E8 /* MASCompositeConstraint.m in Sources */,
 				A459348F20C789D2001FD4E8 /* MASLayoutConstraint.m in Sources */,
-				A451DF8C20B79CC900ADE0EF /* AppDelegate.m in Sources */,
 				A451DF9D20B7A15E00ADE0EF /* DDYQRCodeManager.m in Sources */,
 				A459349520C789D2001FD4E8 /* ViewController+MASAdditions.m in Sources */,
 				A461CBC620BFD26F00BBF728 /* DDYQRCodeImgVC.m in Sources */,
+				A41AAA5D20CA619A00A26818 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A41AAA0920C92F3F00A26818 /* LaunchScreen.storyboard */ = {
+		A41AAA5720CA619A00A26818 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A41AAA0A20C92F3F00A26818 /* Base */,
+				A41AAA5820CA619A00A26818 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
