@@ -9,6 +9,8 @@
  *  统计表明横屏二维码扫描是不必要的，若您需要横屏扫描，请自行处理UI逻辑和myOrientation计算（建议横屏下全屏范围）
  *  本工程属于demo形式，可自行调整UI或者自建UI调用DDYQRCodeManager处理事务
  *  一个二维码更改样式库 https://github.com/EyreFree/EFQRCode
+ 
+ ![DDYQRCodeCamera.jpg](https://github.com/starainDou/DDYQRCode/blob/master/DDYQRCodeCamera.jpg) ![DDYQRCodeImage.png](https://github.com/starainDou/DDYQRCode/blob/master/DDYQRCodeImage.png)
 
 #### 生成
 
