@@ -289,7 +289,7 @@
         CGFloat currentBrightness = [UIScreen mainScreen].brightness;
         CGFloat stepValue = 0.005 * ((brightness > currentBrightness) ? 1 : -1);
         int times = fabs((brightness - currentBrightness) / 0.005);
-        for (CGFloat i = 1; i < times + 1; i++) {
+        for (int i = 1; i < times + 1; i++) {
             [self.brightnessQueue addOperationWithBlock:^{
                 [NSThread sleepForTimeInterval:0.005];
                 [UIScreen mainScreen].brightness = currentBrightness + i * stepValue;

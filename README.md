@@ -10,7 +10,7 @@
  *  本工程属于demo形式，可自行调整UI或者自建UI调用DDYQRCodeManager处理事务
  *  一个二维码更改样式库 https://github.com/EyreFree/EFQRCode
  
- ![DDYQRCodeCamera.jpg](https://github.com/starainDou/DDYQRCode/blob/master/DDYQRCodeCamera.jpg) ![DDYQRCodeImage.png](https://github.com/starainDou/DDYQRCode/blob/master/DDYQRCodeImage.png)
+ ![DDYQRCodeCamera.jpg](https://github.com/starainDou/DDYDemoImage/blob/master/DDYQRCodeCamera.jpg) ![DDYQRCodeImage.png](https://github.com/starainDou/DDYDemoImage/blob/master/DDYQRCodeImage.png)
 
 #### 生成
 
