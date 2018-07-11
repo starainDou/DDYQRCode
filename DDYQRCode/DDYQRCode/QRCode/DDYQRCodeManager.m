@@ -560,7 +560,7 @@ NSErrorDomain DDYQRError = @"DDYQRError";
 
 #pragma makr 光强检测回调 AVCaptureVideoDataOutputSampleBufferDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    
+    // 这里因为只添加了视频输出，没添加音频输出 所以可以不判断 captureOutput 类型
     CFDictionaryRef metadataDict = CMCopyDictionaryOfAttachments(NULL, sampleBuffer, kCMAttachmentMode_ShouldPropagate);
     NSDictionary *metadata = [[NSMutableDictionary alloc] initWithDictionary:(__bridge NSDictionary*)metadataDict];
     CFRelease(metadataDict);
