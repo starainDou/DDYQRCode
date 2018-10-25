@@ -1,0 +1,16 @@
+PODS:
+  - DDYQRCode (1.0.1)
+
+DEPENDENCIES:
+  - DDYQRCode (~> 1.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DDYQRCode
+
+SPEC CHECKSUMS:
+  DDYQRCode: b1f1ccce323f8f9a25c18b49b5f2a86bf718a60d
+
+PODFILE CHECKSUM: 6d30a03611fe059cef95a09dfe31011febbfe8d9
+
+COCOAPODS: 1.6.0.beta.1

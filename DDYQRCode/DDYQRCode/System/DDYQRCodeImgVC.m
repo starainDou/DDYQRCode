@@ -1,14 +1,5 @@
-//
-//  DDYQRCodeImgVC.m
-//  DDYQRCode
-//
-//  Created by SmartMesh on 2018/5/31.
-//  Copyright © 2018年 com.smartmesh. All rights reserved.
-//
-
 #import "DDYQRCodeImgVC.h"
-#import "DDYQRCodeManager.h"
-#import "DDYScanResultVC.h"
+#import <DDYQRCode.h>
 #import "Masonry.h"
 #import "AppDelegate.h"
 
@@ -256,7 +247,7 @@
 #pragma mark DDYQRCodeManagerDelegate
 - (void)ddy_QRCodeScanResult:(NSString *)result scanError:(NSError *)scanError {
     if (!scanError) {
-        DDYScanResultVC *resultVC = [[DDYScanResultVC alloc] init];
+        DDYQRCodeResultController *resultVC = [[DDYQRCodeResultController alloc] init];
         resultVC.resultStr = result;
         [self.navigationController pushViewController:resultVC animated:YES];
     }

@@ -1,0 +1,5 @@
+"DDYQRCodeScanTitle" = "扫一扫";
+"DDYQRCodeScanTip" = "将二维码/条码放入框内, 即可自动扫描";
+"DDYQRCodeAlbum" = "相册";
+"DDYQRCodeFailTip" = "未识别到有效内容";
+"DDYQRCodeFailOK" = "确定";

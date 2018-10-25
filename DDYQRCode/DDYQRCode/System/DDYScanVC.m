@@ -1,7 +1,6 @@
 #import "DDYScanVC.h"
+#import <DDYQRCode.h>
 #import "Masonry.h"
-#import "DDYQRCodeManager.h"
-#import "DDYScanResultVC.h"
 #import "DDYQRCodeImgVC.h"
 #import "AppDelegate.h"
 
@@ -236,18 +235,21 @@
 #pragma mark - DDYQRCodeManagerDelegate
 #pragma mark 扫面结果
 - (void)ddy_QRCodeScanResult:(NSString *)result scanError:(NSError *)scanError {
-    if (scanError) {
-        if (scanError.code == DDYQRErrorCameraNotFount) {
-            [self shakeWarning:@"未识别到有效内容，请换个姿势试试"];
-        } else if (scanError.code == DDYQRErrorPhotoNotFount) {
-            [self.qrcodeManager ddy_stopRunningSession];
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"未识别到有效内容" preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-                [self.qrcodeManager ddy_startRunningSession];
-            }]];
-            [self.navigationController presentViewController:alert animated:YES completion:nil];
-        }
+    if (scanError.code == DDYQRErrorCameraNotFount) {
+        [self shakeWarning:@"未识别到有效内容，请换个姿势试试"];
+    } else if (scanError.code == DDYQRErrorPhotosNotFount) {
+        [self.qrcodeManager ddy_stopRunningSession];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"未识别到有效内容" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [self.qrcodeManager ddy_startRunningSession];
+        }]];
+        [self.navigationController presentViewController:alert animated:YES completion:nil];
     } else {
+        // 只让相机扫描有声音，图片没声音
+        if (scanError.code == DDYQRErrorCameraSuccess) {
+            [DDYQRCodeManager ddy_palySoundWithResource:@"sound.caf"];
+        }
+        
         if ([result hasPrefix:@"http://qm.qq.com/"] ||
             [result hasPrefix:@"https://qm.qq.com/"] ||
             [result hasPrefix:@"https://weixin.qq.com/"] ||
@@ -263,9 +265,8 @@
                 }
             }
         } else {
-            // 如果只让相机扫描有声音，图片扫描无声音可以将声音播放放到 -captureOutput:didOutputMetadataObjects:fromConnection:
-            [DDYQRCodeManager ddy_palySoundWithName:@"DDYQRCode.bundle/sound.caf"];
-            DDYScanResultVC *resultVC = [[DDYScanResultVC alloc] init];
+            
+            DDYQRCodeResultController *resultVC = [[DDYQRCodeResultController alloc] init];
             resultVC.resultStr = result;
             [self.navigationController pushViewController:resultVC animated:YES];
         }

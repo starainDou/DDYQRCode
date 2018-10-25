@@ -1,8 +1,13 @@
+/** MARK: - DDYQRCodeManager 2018/10/23
+ *  !!!: Author: 豆电雨
+ *  !!!: QQ/WX:  634778311
+ *  !!!: Github: https://github.com/RainOpen/
+ *  !!!: Blog:   https://www.jianshu.com/u/a4bc2516e9e5
+ *  MARK: - 二维码相机扫描、相册图片扫描、二维码生成、二维码样式
+ */
 
-#import <Foundation/Foundation.h>
-
-@import UIKit;
-@import AVFoundation;
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 typedef NS_ENUM(NSInteger, DDYQRCodeGradientType) {
     DDYQRCodeGradientTypeNone,        // 纯色.
@@ -26,9 +31,10 @@ typedef NS_ENUM(NSInteger, DDYQRCodeGradientType) {
 
 extern NSErrorDomain DDYQRError;
 
-#define DDYQRErrorNone               0  // 扫描成功
+#define DDYQRErrorCameraSuccess      0  // 相机扫描成功
+#define DDYQRErrorPhotosSuccess      0  // 图片扫描成功
 #define DDYQRErrorCameraNotFount    -1  // 相机扫描未发现二维码
-#define DDYQRErrorPhotoNotFount     -2  // 图片扫描未发现二维码
+#define DDYQRErrorPhotosNotFount    -2  // 图片扫描未发现二维码
 
 /** delegate 优先代理 */
 @property (nonatomic, weak) id <DDYQRCodeManagerDelegate> delegate;
@@ -42,6 +48,7 @@ extern NSErrorDomain DDYQRError;
 @property (nonatomic, assign) CGRect rectOfInterest;
 
 #pragma mark - /////////////////////////////////////////// 权限鉴定 ///////////////////////////////////////////
+#pragma mark !!!: 推荐使用统一权限鉴定工具 https://github.com/RainOpen/DDYAuthManager
 /**
  相机使用权限鉴定
  @param success 有权限回调
@@ -167,14 +174,22 @@ extern NSErrorDomain DDYQRError;
 #pragma mark - ////////////////////////////////////// 音效和亮灯 //////////////////////////////////////
 /**
  播放音效
- @param soundName mainBundle中音效名称
+ @param resource Bundle中音效名称
  */
-+ (void)ddy_palySoundWithName:(NSString *_Nonnull)soundName;
++ (void)ddy_palySoundWithResource:(NSString *)resource;
 
 /**
  打开关闭闪光灯--持续亮灯(非拍照闪灯)
  @param on 开关状态
  */
 + (void)ddy_turnOnTorchLight:(BOOL)on;
+
+
+/**
+ 附加功能: 根据颜色生成扫描框 
+ @param color 主体颜色
+ @return 扫描框图片
+ */
++ (UIImage *)scanImageWithColor:(UIColor *)color;
 
 @end

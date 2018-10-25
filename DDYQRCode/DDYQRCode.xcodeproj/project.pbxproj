@@ -12,8 +12,6 @@
 		A41AAA5F20CA619A00A26818 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A41AAA5920CA619A00A26818 /* Info.plist */; };
 		A41AAA6020CA619A00A26818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A41AAA5A20CA619A00A26818 /* main.m */; };
 		A41AAA6120CA619A00A26818 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41AAA5C20CA619A00A26818 /* ViewController.m */; };
-		A451DF9C20B7A15E00ADE0EF /* DDYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */; };
-		A451DF9D20B7A15E00ADE0EF /* DDYQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */; };
 		A459348C20C789D2001FD4E8 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347420C789D1001FD4E8 /* MASCompositeConstraint.m */; };
 		A459348D20C789D2001FD4E8 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347720C789D1001FD4E8 /* MASConstraint.m */; };
 		A459348E20C789D2001FD4E8 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A459347920C789D1001FD4E8 /* MASConstraintMaker.m */; };
@@ -24,12 +22,15 @@
 		A459349320C789D2001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A459348620C789D1001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		A459349420C789D2001FD4E8 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A459348820C789D1001FD4E8 /* View+MASAdditions.m */; };
 		A459349520C789D2001FD4E8 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A459348B20C789D1001FD4E8 /* ViewController+MASAdditions.m */; };
-		A461CB9B20BD488500BBF728 /* DDYScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A461CB9A20BD488500BBF728 /* DDYScanVC.m */; };
-		A461CBC320BFD08F00BBF728 /* DDYScanResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A461CBC220BFD08F00BBF728 /* DDYScanResultVC.m */; };
-		A461CBC620BFD26F00BBF728 /* DDYQRCodeImgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A461CBC520BFD26F00BBF728 /* DDYQRCodeImgVC.m */; };
+		A469EAED21814D8100174EAD /* DDYScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A469EAE721814D8000174EAD /* DDYScanVC.m */; };
+		A469EAEF21814D8100174EAD /* DDYQRCodeImgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A469EAEC21814D8000174EAD /* DDYQRCodeImgVC.m */; };
+		A469EAF121814E1700174EAD /* DDYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A469EAF021814E1700174EAD /* DDYQRCode.bundle */; };
+		FC7DDE543231621D2D28B32A /* libPods-DDYQRCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB0F16A9F0827DA410B13E3 /* libPods-DDYQRCode.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CB0F16A9F0827DA410B13E3 /* libPods-DDYQRCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDYQRCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC1BFE095D7D7A9D7BC5D13 /* Pods-DDYQRCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDYQRCode.debug.xcconfig"; path = "Target Support Files/Pods-DDYQRCode/Pods-DDYQRCode.debug.xcconfig"; sourceTree = "<group>"; };
 		A41AAA5520CA619A00A26818 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A41AAA5620CA619A00A26818 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A41AAA5820CA619A00A26818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,9 +39,6 @@
 		A41AAA5B20CA619A00A26818 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A41AAA5C20CA619A00A26818 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A451DF6C20B79B1C00ADE0EF /* DDYQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDYQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A451DF9120B7A15E00ADE0EF /* DDYQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYQRCodeManager.h; sourceTree = "<group>"; };
-		A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYQRCode.bundle; sourceTree = "<group>"; };
-		A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYQRCodeManager.m; sourceTree = "<group>"; };
 		A459347320C789D1001FD4E8 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		A459347420C789D1001FD4E8 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		A459347520C789D1001FD4E8 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -66,12 +64,12 @@
 		A459348920C789D1001FD4E8 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		A459348A20C789D1001FD4E8 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		A459348B20C789D1001FD4E8 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		A461CB9920BD488500BBF728 /* DDYScanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYScanVC.h; sourceTree = "<group>"; };
-		A461CB9A20BD488500BBF728 /* DDYScanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYScanVC.m; sourceTree = "<group>"; };
-		A461CBC120BFD08F00BBF728 /* DDYScanResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYScanResultVC.h; sourceTree = "<group>"; };
-		A461CBC220BFD08F00BBF728 /* DDYScanResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYScanResultVC.m; sourceTree = "<group>"; };
-		A461CBC420BFD26F00BBF728 /* DDYQRCodeImgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYQRCodeImgVC.h; sourceTree = "<group>"; };
-		A461CBC520BFD26F00BBF728 /* DDYQRCodeImgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYQRCodeImgVC.m; sourceTree = "<group>"; };
+		A469EAE721814D8000174EAD /* DDYScanVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYScanVC.m; sourceTree = "<group>"; };
+		A469EAE821814D8000174EAD /* DDYScanVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYScanVC.h; sourceTree = "<group>"; };
+		A469EAEB21814D8000174EAD /* DDYQRCodeImgVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYQRCodeImgVC.h; sourceTree = "<group>"; };
+		A469EAEC21814D8000174EAD /* DDYQRCodeImgVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYQRCodeImgVC.m; sourceTree = "<group>"; };
+		A469EAF021814E1700174EAD /* DDYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYQRCode.bundle; sourceTree = "<group>"; };
+		EB190C82B915CF7FDC21E973 /* Pods-DDYQRCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDYQRCode.release.xcconfig"; path = "Target Support Files/Pods-DDYQRCode/Pods-DDYQRCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +77,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7DDE543231621D2D28B32A /* libPods-DDYQRCode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34F1B029DCDBAD28CEBE6F35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CB0F16A9F0827DA410B13E3 /* libPods-DDYQRCode.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A41AAA5420CA619A00A26818 /* System */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +102,11 @@
 				A41AAA5A20CA619A00A26818 /* main.m */,
 				A41AAA5B20CA619A00A26818 /* ViewController.h */,
 				A41AAA5C20CA619A00A26818 /* ViewController.m */,
+				A469EAEB21814D8000174EAD /* DDYQRCodeImgVC.h */,
+				A469EAEC21814D8000174EAD /* DDYQRCodeImgVC.m */,
+				A469EAE821814D8000174EAD /* DDYScanVC.h */,
+				A469EAE721814D8000174EAD /* DDYScanVC.m */,
+				A469EAF021814E1700174EAD /* DDYQRCode.bundle */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -104,6 +116,8 @@
 			children = (
 				A451DF6E20B79B1C00ADE0EF /* DDYQRCode */,
 				A451DF6D20B79B1C00ADE0EF /* Products */,
+				F2916BAEEC18C1FB9135E06E /* Pods */,
+				34F1B029DCDBAD28CEBE6F35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,25 +134,8 @@
 			children = (
 				A41AAA5420CA619A00A26818 /* System */,
 				A459347220C789D1001FD4E8 /* Masonry */,
-				A451DF8F20B79CF500ADE0EF /* QRCode */,
 			);
 			path = DDYQRCode;
-			sourceTree = "<group>";
-		};
-		A451DF8F20B79CF500ADE0EF /* QRCode */ = {
-			isa = PBXGroup;
-			children = (
-				A451DF9720B7A15E00ADE0EF /* DDYQRCode.bundle */,
-				A451DF9120B7A15E00ADE0EF /* DDYQRCodeManager.h */,
-				A451DF9820B7A15E00ADE0EF /* DDYQRCodeManager.m */,
-				A461CB9920BD488500BBF728 /* DDYScanVC.h */,
-				A461CB9A20BD488500BBF728 /* DDYScanVC.m */,
-				A461CBC120BFD08F00BBF728 /* DDYScanResultVC.h */,
-				A461CBC220BFD08F00BBF728 /* DDYScanResultVC.m */,
-				A461CBC420BFD26F00BBF728 /* DDYQRCodeImgVC.h */,
-				A461CBC520BFD26F00BBF728 /* DDYQRCodeImgVC.m */,
-			);
-			path = QRCode;
 			sourceTree = "<group>";
 		};
 		A459347220C789D1001FD4E8 /* Masonry */ = {
@@ -173,6 +170,15 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		F2916BAEEC18C1FB9135E06E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1BFE095D7D7A9D7BC5D13 /* Pods-DDYQRCode.debug.xcconfig */,
+				EB190C82B915CF7FDC21E973 /* Pods-DDYQRCode.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A451DF8220B79B2600ADE0EF /* Build configuration list for PBXNativeTarget "DDYQRCode" */;
 			buildPhases = (
+				D59095FFDA262B90D3031E57 /* [CP] Check Pods Manifest.lock */,
 				A451DF6820B79B1C00ADE0EF /* Sources */,
 				A451DF6920B79B1C00ADE0EF /* Frameworks */,
 				A451DF6A20B79B1C00ADE0EF /* Resources */,
+				18C09F2D197DBBEB90E8B947 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,35 +238,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A451DF9C20B7A15E00ADE0EF /* DDYQRCode.bundle in Resources */,
 				A41AAA5E20CA619A00A26818 /* LaunchScreen.storyboard in Resources */,
 				A41AAA5F20CA619A00A26818 /* Info.plist in Resources */,
+				A469EAF121814E1700174EAD /* DDYQRCode.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18C09F2D197DBBEB90E8B947 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDYQRCode/Pods-DDYQRCode-resources.sh",
+				"${PODS_ROOT}/DDYQRCode/DDYQRCode/DDYQRCode/DDYQRCode.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DDYQRCode.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDYQRCode/Pods-DDYQRCode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D59095FFDA262B90D3031E57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DDYQRCode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A451DF6820B79B1C00ADE0EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A469EAEF21814D8100174EAD /* DDYQRCodeImgVC.m in Sources */,
 				A41AAA6120CA619A00A26818 /* ViewController.m in Sources */,
 				A459349220C789D2001FD4E8 /* NSArray+MASAdditions.m in Sources */,
 				A459349120C789D2001FD4E8 /* MASViewConstraint.m in Sources */,
-				A461CBC320BFD08F00BBF728 /* DDYScanResultVC.m in Sources */,
 				A459348E20C789D2001FD4E8 /* MASConstraintMaker.m in Sources */,
 				A459349420C789D2001FD4E8 /* View+MASAdditions.m in Sources */,
 				A459348D20C789D2001FD4E8 /* MASConstraint.m in Sources */,
 				A41AAA6020CA619A00A26818 /* main.m in Sources */,
 				A459349020C789D2001FD4E8 /* MASViewAttribute.m in Sources */,
 				A459349320C789D2001FD4E8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				A461CB9B20BD488500BBF728 /* DDYScanVC.m in Sources */,
 				A459348C20C789D2001FD4E8 /* MASCompositeConstraint.m in Sources */,
 				A459348F20C789D2001FD4E8 /* MASLayoutConstraint.m in Sources */,
-				A451DF9D20B7A15E00ADE0EF /* DDYQRCodeManager.m in Sources */,
+				A469EAED21814D8100174EAD /* DDYScanVC.m in Sources */,
 				A459349520C789D2001FD4E8 /* ViewController+MASAdditions.m in Sources */,
-				A461CBC620BFD26F00BBF728 /* DDYQRCodeImgVC.m in Sources */,
 				A41AAA5D20CA619A00A26818 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +434,7 @@
 		};
 		A451DF8320B79B2600ADE0EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC1BFE095D7D7A9D7BC5D13 /* Pods-DDYQRCode.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23JJ7VRKJT;
@@ -406,6 +452,7 @@
 		};
 		A451DF8420B79B2600ADE0EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB190C82B915CF7FDC21E973 /* Pods-DDYQRCode.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23JJ7VRKJT;

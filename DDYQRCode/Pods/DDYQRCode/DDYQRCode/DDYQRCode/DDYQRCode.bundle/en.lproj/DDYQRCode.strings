@@ -1,0 +1,5 @@
+"DDYQRCodeScanTitle" = "Scan";
+"DDYQRCodeScanTip" = "Align QRCode/BarCode whin frame to scan";
+"DDYQRCodeAlbum" = "Album";
+"DDYQRCodeFailTip" = "Not found effective content";
+"DDYQRCodeFailOK" = "OK";

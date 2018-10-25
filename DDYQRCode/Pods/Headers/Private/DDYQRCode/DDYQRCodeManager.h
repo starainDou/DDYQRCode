@@ -1,0 +1,1 @@
+../../../DDYQRCode/DDYQRCode/DDYQRCode/DDYQRCodeManager.h

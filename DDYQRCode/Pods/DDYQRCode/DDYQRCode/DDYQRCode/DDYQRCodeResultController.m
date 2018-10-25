@@ -1,18 +1,16 @@
-//
-//  DDYScanResultVC.m
-//  DDYQRCode
-//
-//  Created by SmartMesh on 2018/5/31.
-//  Copyright © 2018年 com.smartmesh. All rights reserved.
-//
+/** MARK: - DDYQRCodeManager 2018/10/23
+ *  !!!: Author: 豆电雨
+ *  !!!: QQ/WX:  634778311
+ *  !!!: Github: https://github.com/RainOpen/
+ *  !!!: Blog:   https://www.jianshu.com/u/a4bc2516e9e5
+ *  MARK: - DDYQRCodeResultController.m
+ */
 
-#import "DDYScanResultVC.h"
-#import "Masonry.h"
-
+#import "DDYQRCodeResultController.h"
 
 #define DDYTopH (self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height)
 
-@interface DDYScanResultVC ()
+@interface DDYQRCodeResultController ()
 
 @property (nonatomic, strong) UILabel *resultLabel;
 
@@ -20,11 +18,11 @@
 
 @end
 
-@implementation DDYScanResultVC
+@implementation DDYQRCodeResultController
 
 - (UILabel *)resultLabel {
     if (!_resultLabel) {
-       _resultLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 300)];
+        _resultLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 300)];
         [_resultLabel setFont:[UIFont systemFontOfSize:15]];
         [_resultLabel setTextAlignment:NSTextAlignmentCenter];
         [_resultLabel setNumberOfLines:0];
@@ -59,18 +57,8 @@
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    [self.resultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view).offset(DDYTopH+40);
-        make.left.mas_equalTo(self.view).offset(15);
-        make.right.mas_equalTo(self.view).offset(-15);
-    }];
-    
-    [self.copyButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.resultLabel.mas_bottom).offset(25);
-        make.left.mas_equalTo(self.view).offset(15);
-        make.right.mas_equalTo(self.view).offset(-15);
-        make.height.mas_equalTo(40);
-    }];
+    self.resultLabel.frame = CGRectMake(15, DDYTopH+40, [UIScreen mainScreen].bounds.size.width-30, 120);
+    self.copyButton.frame = CGRectMake(15, CGRectGetMaxY(self.resultLabel.frame), CGRectGetWidth(self.resultLabel.frame), 40);
 }
 
 - (void)handleCopy {

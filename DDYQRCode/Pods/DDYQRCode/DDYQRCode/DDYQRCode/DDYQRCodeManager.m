@@ -1,3 +1,11 @@
+/** MARK: - DDYQRCodeManager 2018/10/23
+ *  !!!: Author: 豆电雨
+ *  !!!: QQ/WX:  634778311
+ *  !!!: Github: https://github.com/RainOpen/
+ *  !!!: Blog:   https://www.jianshu.com/u/a4bc2516e9e5
+ *  MARK: - DDYQRCodeManager.m
+ */
+
 #import "DDYQRCodeManager.h"
 
 @import CoreImage;
@@ -20,8 +28,7 @@ NSErrorDomain DDYQRError = @"DDYQRError";
 
 #pragma mark - 鉴定权限
 #pragma mark 相机使用权限鉴定
-+ (void)cameraAuthSuccess:(void (^)(void))success fail:(void (^)(void))fail
-{
++ (void)cameraAuthSuccess:(void (^)(void))success fail:(void (^)(void))fail {
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     switch (authStatus)
     {
@@ -542,12 +549,7 @@ NSErrorDomain DDYQRError = @"DDYQRError";
     }
     
     self.previewLayer.frame = preview.bounds;
-    // 非常规rect,而是0-1比例,CGRectMake(y/ScreenH, x/ScreenW, scanW/ScreenH, scanW/ScreenW) CGRectMake(0,0,1,1)时表示全范围
-    CGFloat scaleX = effectiveRect.origin.y/[UIScreen mainScreen].bounds.size.height;
-    CGFloat scaleY = effectiveRect.origin.x/[UIScreen mainScreen].bounds.size.width;
-    CGFloat scaleW = effectiveRect.size.height/[UIScreen mainScreen].bounds.size.height;
-    CGFloat scaleH = effectiveRect.size.width/[UIScreen mainScreen].bounds.size.width;
-    self.metadataOutput.rectOfInterest = CGRectMake(scaleX, scaleY, scaleW, scaleH);
+    self.metadataOutput.rectOfInterest = effectiveRect;
 }
 
 #pragma mark 扫描结果回调 AVCaptureMetadataOutputObjectsDelegate
@@ -559,9 +561,8 @@ NSErrorDomain DDYQRError = @"DDYQRError";
             BOOL success = metadataObjects && metadataObjects.count && ![DDYQRCodeManager ddy_blankString:resultStr];
             if (success)  {
                 [self ddy_stopRunningSession];
-                [DDYQRCodeManager ddy_palySoundWithName:@"DDYQRCode.bundle/sound.caf"];
                 [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(scanTimeout) object:nil];
-                [self scanQRCodeResult:resultStr scanError:nil];
+                [self scanQRCodeResult:resultStr scanError:[NSError errorWithDomain:DDYQRError code:DDYQRErrorCameraSuccess userInfo:nil]];
             }
         });
     }
@@ -590,7 +591,7 @@ NSErrorDomain DDYQRError = @"DDYQRError";
         [_captureSession startRunning];
     }
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(scanTimeout) object:nil];
-    [self performSelector:@selector(scanTimeout) withObject:nil afterDelay:6];
+    [self performSelector:@selector(scanTimeout) withObject:nil afterDelay:10];
 }
 
 #pragma mark 停止运行会话
@@ -605,8 +606,7 @@ NSErrorDomain DDYQRError = @"DDYQRError";
 }
 
 #pragma mark 图片读取二维码
-- (void)ddy_scanQRCodeWithImage:(UIImage *)image
-{
+- (void)ddy_scanQRCodeWithImage:(UIImage *)image {
     if (!image) return;
     dispatch_async(dispatch_get_main_queue(), ^{
         UIImage *img = [self imageSizeInScreen:image];
@@ -619,13 +619,13 @@ NSErrorDomain DDYQRError = @"DDYQRError";
             resultStr = feature.messageString;
         }
         BOOL success = features && features.count && ![DDYQRCodeManager ddy_blankString:resultStr];
-        [self scanQRCodeResult:resultStr scanError:success ? nil : [NSError errorWithDomain:DDYQRError code:DDYQRErrorPhotoNotFount userInfo:nil]];
+        NSInteger errorCode = success ? DDYQRErrorPhotosSuccess : DDYQRErrorPhotosNotFount;
+        [self scanQRCodeResult:resultStr scanError:[NSError errorWithDomain:DDYQRError code:errorCode userInfo:nil]];
     });
 }
 
 #pragma mark 利用UIImagePickerViewController选取二维码图片
-- (void)ddy_scanQRCodeWithImagePickerFromCurrentVC:(UIViewController *)controller
-{
+- (void)ddy_scanQRCodeWithImagePickerFromCurrentVC:(UIViewController *)controller {
     if (!controller) return;
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; //（选择类型）表示仅仅从相册中选取照片
@@ -642,8 +642,7 @@ NSErrorDomain DDYQRError = @"DDYQRError";
     [picker dismissViewControllerAnimated:YES completion:^{ }];
 }
 
-- (void)scanQRCodeResult:(NSString *)resultStr scanError:(NSError *)scanError
-{
+- (void)scanQRCodeResult:(NSString *)resultStr scanError:(NSError *)scanError {
     if ([self.delegate respondsToSelector:@selector(ddy_QRCodeScanResult:scanError:)]) {
         [self.delegate ddy_QRCodeScanResult:resultStr scanError:scanError];
     } else if (self.scanResultBlock) {
@@ -655,9 +654,10 @@ NSErrorDomain DDYQRError = @"DDYQRError";
 #pragma mark 播放音效
 void soundCompleteCallback(SystemSoundID soundID, void *clientData) { }
 
-+ (void)ddy_palySoundWithName:(NSString *)soundName
-{
-    NSString *audioFile = [[NSBundle mainBundle] pathForResource:soundName ofType:nil];
++ (void)ddy_palySoundWithResource:(NSString *)resource {
+    NSString *audioFile = [[NSBundle mainBundle] pathForResource:resource ofType:nil];
+    if (!audioFile) audioFile = [[NSBundle bundleForClass:[self class]] pathForResource:resource ofType:nil];
+    if (!audioFile) return;
     NSURL *fileUrl = [NSURL fileURLWithPath:audioFile];
     SystemSoundID soundID = 0;
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)(fileUrl), &soundID);
@@ -665,9 +665,8 @@ void soundCompleteCallback(SystemSoundID soundID, void *clientData) { }
     AudioServicesPlaySystemSound(soundID);
 }
 
-#pragma mark  打开关闭闪光灯--持续亮灯(非拍照闪灯)
-+ (void)ddy_turnOnTorchLight:(BOOL)on
-{
+#pragma mark 打开关闭闪光灯--持续亮灯(非拍照闪灯)
++ (void)ddy_turnOnTorchLight:(BOOL)on {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     // hasTorch是持续发光 hasFlash是闪光 （setTorchMode: 和 setFlashMode: 同理）
     if ([device hasTorch] && [device hasFlash])
@@ -677,6 +676,55 @@ void soundCompleteCallback(SystemSoundID soundID, void *clientData) { }
         [device setTorchMode: on ? AVCaptureTorchModeOn : AVCaptureTorchModeOff];
         [device unlockForConfiguration];
     }
+}
+/**
+ CGRect rect = CGRectMake(0, 0, size.width, size.height);
+ UIGraphicsBeginImageContext(rect.size);
+ CGContextRef context = UIGraphicsGetCurrentContext();
+ CGContextAddRect(context, rect);
+ CGContextSetStrokeColorWithColor(context, color.CGColor);
+ CGContextSetLineWidth(context, 2.0);
+ CGContextStrokePath(context);
+ UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+ UIGraphicsEndImageContext();
+ return img;
+ */
+#pragma mark 附加功能: 根据颜色生成扫描框
++ (UIImage *)scanImageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 300, 300);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetStrokeColorWithColor(context, color.CGColor);// 设置描边颜色
+    CGContextSetLineWidth(context, 6.); //线的宽度
+    CGContextSetLineCap(context, kCGLineCapSquare); //顶端为方形
+    CGContextSetLineJoin(context, kCGLineJoinMiter); //拐角为尖角
+    
+    // 左上
+    CGContextMoveToPoint(context, 20, 0);
+    CGContextAddLineToPoint(context, 0, 0);
+    CGContextAddLineToPoint(context, 0, 20);
+    
+    // 右上
+    CGContextMoveToPoint(context, 300-20, 0);
+    CGContextAddLineToPoint(context, 300, 0);
+    CGContextAddLineToPoint(context, 300, 20);
+    
+    // 左下
+    CGContextMoveToPoint(context, 0, 300-20);
+    CGContextAddLineToPoint(context, 0, 300);
+    CGContextAddLineToPoint(context, 20, 300);
+    
+    // 右下
+    CGContextMoveToPoint(context, 300-20, 300);
+    CGContextAddLineToPoint(context, 300, 300);
+    CGContextAddLineToPoint(context, 300, 300-20);
+    
+    CGContextDrawPath(context, kCGPathStroke);
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
 }
 
 @end
