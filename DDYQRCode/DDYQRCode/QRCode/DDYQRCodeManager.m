@@ -511,10 +511,19 @@ NSErrorDomain DDYQRError = @"DDYQRError";
             [_captureSession addOutput:_metadataOutput];
         }
         // 必须先加addOutput 并且有权限
-        _metadataOutput.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,
+        _metadataOutput.metadataObjectTypes = @[AVMetadataObjectTypeUPCECode,
+                                                AVMetadataObjectTypeCode39Code,
+                                                AVMetadataObjectTypeCode39Mod43Code,
                                                 AVMetadataObjectTypeEAN13Code,
                                                 AVMetadataObjectTypeEAN8Code,
-                                                AVMetadataObjectTypeCode128Code];
+                                                AVMetadataObjectTypeCode93Code,
+                                                AVMetadataObjectTypeCode128Code,
+                                                AVMetadataObjectTypePDF417Code,
+                                                AVMetadataObjectTypeQRCode,
+                                                AVMetadataObjectTypeAztecCode,
+                                                AVMetadataObjectTypeInterleaved2of5Code,
+                                                AVMetadataObjectTypeITF14Code,
+                                                AVMetadataObjectTypeDataMatrixCode];
         
         // 光强检测
         AVCaptureVideoDataOutput *lightOutput = [[AVCaptureVideoDataOutput alloc] init];

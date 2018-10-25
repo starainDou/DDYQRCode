@@ -12,6 +12,8 @@
  
  ![DDYQRCodeCamera.jpg](https://github.com/starainDou/DDYDemoImage/blob/master/DDYQRCodeCamera.jpg) ![DDYQRCodeImage.png](https://github.com/starainDou/DDYDemoImage/blob/master/DDYQRCodeImage.png)
 
+# [该库源码请移步https://github.com/starainDou/DDYQRCode](https://github.com/starainDou/DDYQRCode)
+
 #### 生成
 
   * 生成普通二维码

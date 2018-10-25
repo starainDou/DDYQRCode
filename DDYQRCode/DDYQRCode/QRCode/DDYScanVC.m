@@ -180,7 +180,8 @@
     [self.myQRCodeButton sizeToFit];
     self.myQRCodeButton.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2., [UIScreen mainScreen].bounds.size.height-30);
     [DDYQRCodeManager cameraAuthSuccess:^{
-        [self.qrcodeManager ddy_ScanQRCodeWithPreview:self.view effectiveRect:CGRectMake(DDYScanX, DDYScanY, DDYScanWH, DDYScanWH)];
+        [self.qrcodeManager ddy_ScanQRCodeWithPreview:self.view effectiveRect:CGRectMake(0, 0, 1, 1)];
+//        [self.qrcodeManager ddy_ScanQRCodeWithPreview:self.view effectiveRect:CGRectMake(DDYScanX, DDYScanY, DDYScanWH, DDYScanWH)];
     } fail:^{ NSLog(@"未授权时处理，例如弹窗/返回"); }];
 }
 
@@ -247,11 +248,27 @@
             [self.navigationController presentViewController:alert animated:YES completion:nil];
         }
     } else {
-        // 如果只让相机扫描有声音，图片扫描无声音可以将声音播放放到 -captureOutput:didOutputMetadataObjects:fromConnection:
-        [DDYQRCodeManager ddy_palySoundWithName:@"DDYQRCode.bundle/sound.caf"];
-        DDYScanResultVC *resultVC = [[DDYScanResultVC alloc] init];
-        resultVC.resultStr = result;
-        [self.navigationController pushViewController:resultVC animated:YES];
+        if ([result hasPrefix:@"http://qm.qq.com/"] ||
+            [result hasPrefix:@"https://qm.qq.com/"] ||
+            [result hasPrefix:@"https://weixin.qq.com/"] ||
+            [result hasPrefix:@"https://u.wechat.com/"])
+        {
+            if (@available(iOS 10.0, *)) {
+                if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:result]]) {
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:result] options:@{} completionHandler:nil];
+                }
+            } else {
+                if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:result]]) {
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:result]];
+                }
+            }
+        } else {
+            // 如果只让相机扫描有声音，图片扫描无声音可以将声音播放放到 -captureOutput:didOutputMetadataObjects:fromConnection:
+            [DDYQRCodeManager ddy_palySoundWithName:@"DDYQRCode.bundle/sound.caf"];
+            DDYScanResultVC *resultVC = [[DDYScanResultVC alloc] init];
+            resultVC.resultStr = result;
+            [self.navigationController pushViewController:resultVC animated:YES];
+        }
     }
 }
 

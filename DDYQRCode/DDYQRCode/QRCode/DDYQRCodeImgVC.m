@@ -67,7 +67,8 @@
 
 #pragma mark 生成图片
 - (void)loadImg {
-    [DDYQRCodeManager ddy_QRCodeWithString:@"123456789"
+    NSString *pasteBoardString = [UIPasteboard generalPasteboard].string;
+    [DDYQRCodeManager ddy_QRCodeWithString:pasteBoardString ? pasteBoardString : @"123456789"
                             widthAndHeight:300
                                    success:^(UIImage *QRCodeImage) {
                                        self.imageView1.image = QRCodeImage;
